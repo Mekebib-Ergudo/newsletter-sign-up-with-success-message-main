@@ -12,8 +12,10 @@ body {
 p {
 	color: hsl(235, 18%, 26%);
 }
+
 .container {
 	width: 55vw;
+
 	background-color: #fff;
 	padding: 14px;
 	position: absolute;
@@ -84,4 +86,76 @@ p {
 .error {
 	color: red;
 	padding-left: 120px;
+}
+@media only screen and (max-width: 375px) {
+	/*Small smartphones [325px -> 425px]*/
+
+	.container {
+		width: 100%;
+		object-fit: cover;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		overflow: hidden;
+	}
+	.left-container {
+		margin: 0;
+		padding: 30px;
+		margin-bottom: 10px;
+	}
+	.left-container-title h1 {
+		margin-bottom: 8px;
+	}
+	.svg-title {
+		gap: 10px;
+		line-height: 1.5rem;
+	}
+	.svg-title img {
+		width: 20px;
+	}
+	.input {
+		margin-top: 35px;
+	}
+	.input input {
+		margin-bottom: 1.5rem;
+	}
+	.right-container-img {
+		width: 100%;
+		object-fit: contain;
+		overflow: hidden;
+	}
+}
+.success {
+	width: 20rem;
+	display: none;
+	background-color: white;
+	padding: 2.5rem;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 10rem;
+	align-items: center;
+}
+.success p {
+	font-size: 0.85rem;
+	margin-bottom: 1.2rem;
+}
+.success h1 {
+	margin-bottom: 1rem;
+	font-size: 2.5rem;
+}
+.Dismiss {
+	width: 100%;
+	padding: 10px;
+	background-color: hsl(234, 29%, 20%);
+	color: white;
+	border: 1px solid #ccc;
+	transition: background-color 0.2s ease-in-out;
+	border-radius: 6px;
+}
+.Dismiss:hover {
+	background-color: hsl(4, 100%, 67%);
+}
+.success img {
+	width: 45px;
+	margin-bottom: 1.3rem;
 }
